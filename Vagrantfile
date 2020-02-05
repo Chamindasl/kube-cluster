@@ -1,5 +1,5 @@
 IMAGE_NAME = "ubuntu/bionic64"
-N = 1
+N = 2
 
 Vagrant.configure("2") do |config|
     config.ssh.insert_key = false

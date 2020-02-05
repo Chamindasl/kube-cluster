@@ -113,7 +113,15 @@
 
   - name: Copy join command to local file
     local_action: copy content="{{ join_command.stdout_lines[0] }}" dest="./join-command"
-    
+
+  - name: Setup autocomplete in bash into the current shell, bash-completion package should be installed first
+    become: false
+    command: source <(kubectl completion bash)
+
+  - name: add autocomplete permanently to your bash shell
+    become: false
+    command: echo "source <(kubectl completion bash)" >> ~/.bashrc
+
   handlers:
     - name: docker status
       service: name=docker state=started
