@@ -1,0 +1,5 @@
+/vagrant_ansible_inventory_*
+/ubuntu-bionic-18.04-cloudimg-console.log
+/.vagrant/
+/.idea/
+/kubernetes-setup/join-command
