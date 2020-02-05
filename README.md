@@ -32,12 +32,13 @@ kw2    Ready    <none>   35m   v1.17.2   192.168.50.30   <none>        Ubuntu 18
 ```
 
 ## Disclaimer
-This is repo is based on original kubenetes post. Its a great article. Thanks to Author: Naresh L J  
+This repo is based on original kubenetes post below. Its a great article. Thanks to Author: Naresh L J  
 https://kubernetes.io/blog/2019/03/15/kubernetes-setup-using-ansible-and-vagrant/
 
 ### Why another
 * Original is not working for Ubuntu Bionic (18.04 LTS), the latest ubuntu which has docker binaries. As of writing latest ubuntu server is Eoan Ermine, but no official docker binaries for Eoan Ermine yet.
 * is not portable (not working for Windows)
+* is not straight forward. have to compose together
 * is not working for Kubenetes > 1.17.X
 * not comes with Kubectul autocomplete 
     
