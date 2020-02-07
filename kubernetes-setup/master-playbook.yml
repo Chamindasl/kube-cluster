@@ -2,6 +2,19 @@
 - hosts: all
   become: true
   tasks:
+  - name: Password ssh
+    replace:
+      path:  /etc/ssh/sshd_config
+      regexp: 'PasswordAuthentication no'
+      replace: 'PasswordAuthentication yes'
+      backup: yes
+
+  - name: Restart ssh
+    service:
+      name: ssh
+      daemon_reload: yes
+      state: restarted
+
   - name: Install packages that allow apt to be used over HTTPS
     apt:
       name: "{{ packages }}"
