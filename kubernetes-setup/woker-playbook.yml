@@ -94,7 +94,7 @@
       state: restarted
 
   - name: Copy the join command to server location
-    copy: src=/vagrant/kubernetes-setup/join-command dest=/tmp/join-command.sh mode=0744
+    copy: src=/vagrant/kubernetes-setup/join-command dest=/tmp/join-command.sh mode=0744 remote_src=yes
 
   - name: Join the node to cluster
     command: sh /tmp/join-command.sh
