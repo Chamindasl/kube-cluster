@@ -6,7 +6,7 @@ Setup a full blown multi node kubenetes cluster on Ubuntu Bionic (18.04 LTS)
 ## Prerequisites
 * Vagrant
 * VirtualBox (or similar) as VM provider
-* (Windows Only) guest_ansible vagrant plugin 
+* Ansible (Linux/Mac) or guest_ansible vagrant plugin (Widows) 
 
 ## Setup
 ### Checkout or download the code
