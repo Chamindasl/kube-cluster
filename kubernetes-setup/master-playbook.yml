@@ -126,7 +126,7 @@
 
   - name: Copy join command to local file
     copy:
-      dest: "./join-command"
+      dest: "/vagrant/kubernetes-setup/join-command"
       content: "{{ join_command.stdout_lines[0] }}"
 
   - name: Add autocomplete permanently to bash shell
