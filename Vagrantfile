@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
             ansible.playbook = "kubernetes-setup/master-playbook.yml"
             ansible.extra_vars = {
                 node_ip: "192.168.50.10",
+                ansible_python_interpreter:"/usr/bin/python3",
             }
         end
     end
@@ -32,6 +33,7 @@ Vagrant.configure("2") do |config|
                 ansible.playbook = "kubernetes-setup/woker-playbook.yml"
                 ansible.extra_vars = {
                     node_ip: "192.168.50.#{i * 10 + 10}",
+                    ansible_python_interpreter:"/usr/bin/python3",
                 }
             end
         end
